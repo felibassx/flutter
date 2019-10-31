@@ -1,0 +1,47 @@
+APUNTES FLUTTER
+===============
+
+1. Instalaciones 
+
+Pluggins VSCode:
+ - Awesome Flutter Snippets
+ - Bracket Pair Colorizer 2
+ - Dart
+ - Flutter
+ - Material Icon Theme
+ - Paste JSON as Code
+ - Terminal
+
+Android Studio
+
+
+FLUTTER
+=======
+
+-   AOT Compilado rapido predecible código nativo
+-   Puede ser JIT (Jus in Time) compilado para una 
+    velocidad excepcional de desrrollo
+-   Permite ejecutar animaciones que corren a 60 fps
+-   HotReload: cambios al instante
+
+-   void main() {} // Punto inicial
+-   Lenguaje tipado
+-   Future, son el equivalente a las promesas en javascript
+
+
+¿QUÉ ES UN WIDGET?
+==================
+
+Es una clase que puede tener argumentos 
+posiciones y argumentos con nombre, Todo en flutter es un widget.
+Con piezas que forman parte de un conjunto de componentes que 
+componen una aplicación.
+
+existen dos tipo:
+StatelessWidget = sin estado
+StatefulWidget = Con estado 
+
+
+
+
+
