@@ -15,45 +15,43 @@ class HomePage extends StatelessWidget {
   }
 
   Widget _lista() {
-
     return FutureBuilder(
       future: menuProvider.cargarData(),
       initialData: [],
       builder: (context, AsyncSnapshot<List<dynamic>> snapshot) {
-
         // print('Builder');
         // print(snapshot.data);
 
         return ListView(
-          children: _createListItems(snapshot.data),
+          children: _createListItems(snapshot.data, context),
         );
       },
     );
-    
   }
 
-  List<Widget> _createListItems( List<dynamic> data ) {
-
+  List<Widget> _createListItems(List<dynamic> data, BuildContext context) {
     final List<Widget> opciones = new List<Widget>();
 
     data.forEach((opt) {
-
       final widgetTemp = ListTile(
-        title: Text( opt['texto'] ),
+        title: Text(opt['texto']),
         leading: getIcon(opt['icon']),
-        trailing: Icon(Icons.keyboard_arrow_right, color: Colors.blue,),
-        onTap: () {},
+        trailing: Icon(
+          Icons.keyboard_arrow_right,
+          color: Colors.blue,
+        ),
+        onTap: () {
+          Navigator.pushNamed(context, opt['ruta']);
+          // final route = MaterialPageRoute(
+          //   builder: ( context ) => AlertPage()
+          // );
+          // Navigator.push(context, route);
+        },
       );
 
-      opciones..add( widgetTemp )
-              ..add( Divider() );
-
+      opciones..add(widgetTemp)..add(Divider());
     });
 
     return opciones;
-
-   
-   
   }
-  
 }
